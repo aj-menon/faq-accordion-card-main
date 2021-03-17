@@ -11,70 +11,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/styles.css" />
   <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <script src="./script/index.js"></script>
 </head>
 
 <body>
   <div id="container">
-    <div class="img-woman-desktop">
-      <img id="woman" src="./images/illustration-woman-online-desktop.svg" alt="" />
-    </div>
-    <div class="img-box-desktop">
-      <img id="box" src="./images/illustration-box-desktop.svg" alt="" />
-    </div>
+    <div class='img-woman'><img id="woman" src="./images/illustration-woman-online-desktop.svg" alt="" /></div>
+    <div class="img-box"><img id="box" src="./images/illustration-box-desktop.svg" alt="" /></div>
     <div id="accordion-container">
       <div class="title">FAQ</div>
       <div id="questions">
         <details id="question-1">
-          <summary>How many team members can I invite?</summary>
-          You can invite up to 2 additional users on the Free plan. There is
-          no limit on team members for the Premium plan.
+          <summary class='summary'>How many team members can I invite? <img class="arrow-down"
+              src='./images/icon-arrow-down.svg' /></summary>
+          <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium
+            plan.</p>
         </details>
-        <hr />
         <details id="question-2">
-          <summary>What is the maximum file upload size?</summary>
-          No more than 2GB. All files in your account must fit your allotted
-          storage space.
+          <summary class='summary'>What is the maximum file upload size? <img class="arrow-down"
+              src='./images/icon-arrow-down.svg' /></summary>
+          <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
         </details>
-        <hr />
         <details id="question-3">
-          <summary>How do I reset my password?</summary>
-          Click “Forgot password” from the login page or “Change password”
-          from your profile page. A reset link will be emailed to you.
+          <summary class='summary'>How do I reset my password? <img class="arrow-down"
+              src='./images/icon-arrow-down.svg' /></summary>
+          <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will
+            be emailed to you.</p>
         </details>
-        <hr />
         <details id="question-4">
-          <summary>Can I cancel my subscription?</summary>
-          Yes! Send us a message and we’ll process your request no questions
-          asked.
+          <summary class='summary'>Can I cancel my subscription?<img class="arrow-down"
+              src='./images/icon-arrow-down.svg' /></summary>
+          <p>Yes ! Send us a message and we’ll process your request no questions asked.</p>
         </details>
-        <hr />
         <details id="question-5">
-          <summary>Do you provide additional support?</summary>
-          Chat and email support is available 24/7. Phone lines are open
-          during normal business hours.
+          <summary class='summary'>Do you provide additional support?<img class="arrow-down"
+              src='./images/icon-arrow-down.svg' /></summary>
+          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
         </details>
-        <hr />
       </div>
     </div>
   </div>
-
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">A
-      Menon</a>.
-  </div>
+  <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>. Coded by <a href="#">A Menon</a>. </div>
 </body>
 
 </html>
