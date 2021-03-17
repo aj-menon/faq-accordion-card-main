@@ -15,15 +15,15 @@
 }
 
 body {
+	height: 100vh;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	/* overflow: hidden; */
+
 	align-items: center;
 	justify-content: center;
 	text-align: left;
 
-	height: 100vh;
 	margin: 0;
 	padding: 0;
 
@@ -33,7 +33,7 @@ body > #container {
 	background: url(../images/bg-pattern-desktop.svg);
 	background-repeat: no-repeat;
 	background-color: white;
-	/* min-width: 900px; */
+	min-width: 900px;
 	width: 1000px;
 	height: 500px;
 	border-radius: 2em;
