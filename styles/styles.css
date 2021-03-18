@@ -116,7 +116,9 @@ details[open] summary {
 	color: #f87c57;
 }
 .summary + p {
-	font-size: 12px;
+	padding: 1em 0;
+	font-size: 14px;
+	line-height: 1.5;
 	color: #4641418a;
 }
 .summary::-webkit-details-marker {
@@ -197,10 +199,5 @@ details[open] summary {
 	}
 	.summary {
 		font-size: 14px;
-	}
-	.summary + p {
-		padding: 1em 0;
-		font-size: 14px;
-		line-height: 1.5;
 	}
 }
