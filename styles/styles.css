@@ -87,7 +87,20 @@ details {
 	padding-bottom: 1.5em;
 	border-bottom: rgba(204, 204, 204, 0.404) 0.5px solid;
 }
+details[open] summary ~ * {
+	animation: open-summary 0.3s ease-in-out;
+}
 
+@keyframes open-summary {
+	0% {
+		opacity: 0;
+		margin-top: -10px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
 details[open] {
 	padding-bottom: 0;
 }
@@ -96,9 +109,11 @@ details[open] {
 	position: relative;
 	margin-left: auto;
 	bottom: 1em;
+	transition: 0.3s ease;
 }
 details[open] .arrow-down {
 	transform: rotateX(180deg);
+	transition: 0.3s ease-in-out;
 }
 details[open] summary {
 	font-weight: 700;
