@@ -10,39 +10,36 @@
 }
 * {
 	box-sizing: border-box;
-}
-/* Mobile first  */
-html {
-	/* width: 400px; */
-	overflow: hidden;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 }
 
 body {
-	/* width: 90%; */
-	height: 100vh;
 	font-size: 12px;
 	font-family: "Kumbh Sans", sans-serif;
-
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	background-size: contain;
 	background: linear-gradient(var(--soft-violet), var(--soft-blue)) no-repeat;
 }
 body > #container {
-	display: flex;
-	margin-top: 150px;
-	margin-left: auto;
-	margin-right: auto;
-	flex-direction: row;
-	justify-content: space-between;
-
-	background: url(../images/bg-pattern-desktop.svg) no-repeat center top;
-
+	background: url(../images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
 	background-color: white;
-	width: 365px;
-	height: 600px;
+	/* min-width: 900px;
+	width: 1000px;
+	height: 500px; */
+	width: 55%;
+	height: 60%;
 	border-radius: 2em;
-	background-position: 63px -140px;
-	background-size: 245px;
+	background-position: -47em -22em;
+
 	box-shadow: 0px 15px 10px -3px var(--verydark-blue);
 }
 
@@ -51,43 +48,39 @@ body > #container {
 	position: absolute;
 }
 .img-woman {
-	/* overflow: hidden; */
+	overflow: hidden;
 	height: 100%;
 }
 .img-woman #woman {
 	position: relative;
-	left: 77px;
-	top: -100px;
-	width: 220px;
+
+	right: 4.5rem;
+	top: 7rem;
 }
 
 .img-box #box {
 	position: relative;
-	top: -44px;
-	left: 58px;
-	width: 100px;
+	top: 15rem;
+
+	right: 5rem;
 }
 #accordion-container {
 	position: relative;
-	left: -135px;
-	top: 120px;
-	max-width: 310px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	left: 56%;
+	top: 15%;
+	width: 50%;
 	/* left: 40rem;
 	top: 5rem; */
 }
 #accordion-container .title {
 	font-weight: 700;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 #questions {
-	/* text-align: left; */
+	text-align: left;
 	margin-left: 0;
-	top: 40px;
 	position: absolute;
-	width: 300px;
+	width: 75%;
 }
 details {
 	margin-top: 2rem;
@@ -146,67 +139,80 @@ details[open] summary {
 .summary::-webkit-details-marker {
 	list-style: none;
 }
-
-/*  when screen size greater than 1000px */
-@media only screen and (min-width: 1000px) {
-	html {
-		width: 100%;
-	}
-	body {
-		height: 100vh;
-		text-align: left;
-	}
-	body > #container {
-		position: relative;
-		margin: 0 auto;
-		top: 130px;
-
-		width: 1000px;
-		background-size: auto;
-		height: 550px;
-		background-size: auto;
-		background-position-x: -554px;
-		background-position-y: -288px;
-	}
-	#questions {
-		width: auto;
-	}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: relative;
+	bottom: -15%;
+	padding: 1em;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+@media (min-width: 1201px) {
+	#container,
+	.images,
 	#accordion-container {
-		position: absolute;
-		left: 500px;
-		top: 90px;
-		justify-content: left;
+		transition: 0.5s ease-in-out;
 	}
-	.title {
-		text-align: left;
+}
+@media (max-width: 1200px) {
+	body {
+		flex-wrap: wrap;
+		font-family: "Kumbh Sans", sans-serif;
 	}
-	details {
-		width: 400px;
+	#container {
+		min-width: 375px;
+		min-height: 700px;
+		position: relative;
+		top: 6%;
+		background-image: url(../images/bg-pattern-mobile.svg) !important;
+		background-repeat: no-repeat;
+		background-position: 57% 2% !important;
 	}
-
 	.images {
-		position: absolute;
-		height: 100%;
-	}
-	.img-box,
-	.img-woman {
+		left: 7%;
+		top: -15%;
 		position: relative;
 	}
+	.images,
+	#accordion-container {
+		transition: 1s ease-in-out;
+	}
 	.img-woman {
-		/* height: 100%; */
-		overflow: hidden;
+		overflow: visible;
 	}
 	.img-woman #woman {
-		/* left: 77px;
-		top: -100px; */
-		left: -79px;
-		top: 70px;
-		width: auto;
+		top: -16.5%;
+		left: 18%;
+	}
+	img#woman {
+		width: 21em;
+		transition: 1s ease-in-out;
+	}
+	img#box {
+		width: 8em;
+		transition: 1s ease-in-out;
+	}
+	.img-box #box {
+		/* top: -3.5em; */
+		top: 6em;
+		left: 46%;
 	}
 
-	.img-box #box {
-		top: -346px;
-		left: -93px;
-		width: auto;
+	#accordion-container {
+		left: 40%;
+		width: 100%;
+		top: 20%;
+	}
+	#accordion-container .title {
+		font-size: 3em;
+	}
+	#questions {
+		left: -30%;
+		width: 80%;
+	}
+	.summary {
+		font-size: 14px;
 	}
 }
