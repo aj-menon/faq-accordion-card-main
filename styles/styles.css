@@ -41,9 +41,9 @@ body {
 .container {
 	margin-top: 10rem;
 	background: #ffffff;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	max-width: 55rem;
-	min-height: 55vh;
+	min-height: 60vh;
 	background-image: url("../images/bg-pattern-mobile.svg");
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
@@ -78,7 +78,7 @@ body {
 }
 details {
 	margin-top: 1rem;
-	padding-bottom: 1.25em;
+	padding-bottom: 2.25em;
 	border-bottom: rgba(204, 204, 204, 0.404) 0.5px solid;
 }
 details[open] summary ~ * {
@@ -114,9 +114,9 @@ details[open] summary {
 }
 .summary {
 	font-weight: 400;
-	font-size: 0.5rem;
+	font-size: 0.725rem;
 	color: #4f5054;
-	padding-right: 1rem;
+
 	list-style: none;
 	outline: 0; /* remove blue border around details[open] in chrome*/
 }
@@ -146,6 +146,7 @@ details[open] summary {
 	.container {
 		min-width: 1000px;
 		display: flex;
+		border-radius: 2rem;
 		background-image: url(../images/bg-pattern-desktop.svg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -175,23 +176,26 @@ details[open] summary {
 		margin: auto 0 auto -3rem;
 	}
 	.accordion-container h1.title {
-		margin: -12rem 0 0 0;
+		margin: -5rem 0 0 0;
+		padding-bottom: 1.5rem;
 		text-align: left;
 	}
 
 	details {
 		width: 400px;
+		padding-bottom: 1.5rem;
 	}
 	.questions {
-		padding: 1rem 4rem 0 0;
+		margin: 1rem 4rem 0 0;
 	}
 	.summary {
 		font-size: 1rem;
 	}
 	.summary + p {
-		font-size: 0.775rem;
+		font-size: 0.785rem;
 		margin-top: 0;
 		line-height: 1.5;
 		color: #4641418a;
+		width: 23rem;
 	}
 }
