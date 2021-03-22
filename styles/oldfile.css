@@ -28,7 +28,7 @@ body {
 	background-size: contain;
 	background: linear-gradient(var(--soft-violet), var(--soft-blue)) no-repeat;
 }
-body > #container {
+body > .container {
 	background: url(../images/bg-pattern-desktop.svg);
 	background-repeat: no-repeat;
 	background-color: white;
@@ -150,7 +150,7 @@ details[open] summary {
 	color: hsl(228, 45%, 44%);
 }
 @media (min-width: 1201px) {
-	#container,
+	.container,
 	.images,
 	#accordion-container {
 		transition: 0.5s ease-in-out;
@@ -161,7 +161,7 @@ details[open] summary {
 		flex-wrap: wrap;
 		font-family: "Kumbh Sans", sans-serif;
 	}
-	#container {
+	.container {
 		min-width: 375px;
 		min-height: 700px;
 		position: relative;
